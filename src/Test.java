@@ -41,5 +41,6 @@ public class Test
 		
 		System.out.println(t.printParantClass((new LinkedList()).getClass()));
 		t.printParantClass("java.util.LinkedList");
+		System.out.println();
 	}
 }
