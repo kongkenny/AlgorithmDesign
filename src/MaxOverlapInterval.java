@@ -9,9 +9,9 @@ public class MaxOverlapInterval
 		int count = 0;
 		int i = 0;
 		int j = 0;
-		while (i < a.length || j < b.length)
+		while (i < a.length && j < b.length)
 		{
-			if (i < a.length && a[i] <= b[j])
+			if (a[i] <= b[j])
 			{
 				i++;
 				count++;
@@ -19,11 +19,12 @@ public class MaxOverlapInterval
 			else
 			{
 				j++;
-				if (count > result)
-				{
-					result = count;
-				}
 				count--;
+			}
+			
+			if (count > result)
+			{
+				result = count;
 			}
 		}
 		
